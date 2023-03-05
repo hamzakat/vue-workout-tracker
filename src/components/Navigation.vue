@@ -14,7 +14,7 @@
         <router-link class="cursor-pointer" :to="{ name: '' }"
           >Create</router-link
         >
-        <router-link class="cursor-pointer" :to="{ name: 'Home' }"
+        <router-link class="cursor-pointer" :to="{ name: 'Login' }"
           >Login</router-link
         >
         <li class="cursor-pointer">Logout</li>
