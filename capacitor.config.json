@@ -1,0 +1,6 @@
+{
+  "appId": "com.h.wt",
+  "appName": "Workout Tracker",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
