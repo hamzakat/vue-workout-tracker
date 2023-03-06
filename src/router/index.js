@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { supabase } from "../supabase/init";
 import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Create from "../views/Create.vue";
 import ViewWorkout from "../views/ViewWorkout.vue";
-import { supabase } from "../supabase/init";
 
 const routes = [
   {
@@ -39,7 +39,7 @@ const routes = [
     name: "Create",
     component: Create,
     meta: {
-      title: "Creat",
+      title: "Create",
       auth: true,
     },
   },
@@ -61,24 +61,22 @@ const router = createRouter({
 
 // Change document titles
 router.beforeEach((to, from, next) => {
-  document.title = `${to.meta.title} | Workout Tracker`;
+  document.title = `${to.meta.title} | Active Tracker`;
   next();
 });
 
 // Route guard for auth routes
 router.beforeEach((to, from, next) => {
   const user = supabase.auth.user();
-  // check if the distination requires auth
   if (to.matched.some((res) => res.meta.auth)) {
-    // check if the user is logged in
     if (user) {
-      next(); // continue safely
+      next();
       return;
-    } else {
-      // redirect to Login page
-      next({ name: "Login" });
     }
+    next({ name: "Login" });
+    return;
   }
+  next();
 });
 
 export default router;
