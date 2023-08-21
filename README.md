@@ -1,6 +1,12 @@
 # Workout Tracker
 
-Let's try using Vue 3, Capacitor, Tailwind CSS, and Supabase as a dev stack!
+Open-source cross-platform (Web - Mobile) personal workout planner, built using Vue 3, Capacitor, Tailwind CSS, and Supabase.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="image/README/1692650299942.png" alt="Image 1" width="200" />
+  <img src="image/README/1692650320070.png" alt="Image 2" width="200" />
+  <img src="image/README/1692650330078.png" alt="Image 3" width="200" />
+</div>
 
 ## Project setup
 
